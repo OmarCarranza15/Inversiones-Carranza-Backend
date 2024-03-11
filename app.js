@@ -19,7 +19,6 @@ import { dirname } from 'path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename)
 
-const PORT = 8000;
 const app = express()
 
 app.use(cors())
@@ -30,13 +29,13 @@ app.use('/ServiciosOfrecidos', serviciosOfrecidos)
 app.use('/proyehasimage',ProyeHasImagenes)
 app.use('/imagenes', Imagenes)
 
-app.use(myconn(mysql,{
-   host:'localhost',
-   port:3306,
-   user:'InCarranza',
-   password:'admin',
-   database:'db_incarranza'
-}))
+app.use(myconn(mysql, {
+   host: 'incarranza13.mysql.database.azure.com',
+   port: 3306,
+   user: 'InCarranza',
+   password: 'Sashaloka13',
+   database: 'db_incarranza'
+ }));
 app.use(express.static(path.join(__dirname,'../../bdimages')))
 import routes from './routes/ImagenRoutes.js'
 app.use(routes)
@@ -49,6 +48,7 @@ try {
 }
 //nodemon app, ahora iniciamos aqui la base de datos
 
-app.listen(PORT, ()=> {
-   console.log('Server UP runnung in http://localhost:'+PORT)
-})
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Servidor en funcionamiento en el puerto ${PORT}`);
+});
