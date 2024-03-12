@@ -22,7 +22,7 @@ const __dirname = dirname(__filename)
 const app = express()
 
 app.use(cors(//{
-  //origin: ['https://inversiones-carranza-frontend-tau.vercel.app', 'https://inversiones-carranza-frontend-giwqtriin-omar-carranzas-projects.vercel.app']
+  //origin: ['inversiones-carranza-frontend.vercel.app', 'https://inversiones-carranza-frontend-alfoxp5fa-omar-carranzas-projects.vercel.app']
 //}
 ));
 app.use(express.json())
