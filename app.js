@@ -21,9 +21,7 @@ const __dirname = dirname(__filename)
 
 const app = express()
 
-app.use(cors({
-  origin: ['https://inversiones-carranza-frontend.vercel.app', 'https://inversiones-carranza-frontend-alfoxp5fa-omar-carranzas-projects.vercel.app']
-}));
+app.use(cors());
 app.use(express.json())
 app.use('/usuarios', usuarioRoutes)
 app.use('/proyectosrealizados', proyectosRealizados)

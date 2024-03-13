@@ -5,6 +5,7 @@ import {Sequelize} from 'sequelize'
     })
 export default db
 
+
 //intalar las siguentes dependencia 
 /*npm install sequelize*/
 

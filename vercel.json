@@ -1,0 +1,16 @@
+{
+    "Builds": [
+        {
+            "src": "./app.js",
+            "use": "@vercel/nodemon"
+        }
+    ],
+
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/"
+        }
+    ]
+
+}
