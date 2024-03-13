@@ -1,14 +1,15 @@
 {
     "version": 2,
-  
     "builds": [{ "src": "app.js", "use": "@vercel/node" }],
-  
     "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/"
-      }
+      { "src": "/usuarios", "dest": "/app.js" },
+      { "src": "/proyectosrealizados", "dest": "/app.js" },
+      { "src": "/ServiciosOfrecidos", "dest": "/app.js" },
+      { "src": "/proyehasimage", "dest": "/app.js" },
+      { "src": "/imagenes", "dest": "/app.js" },
+      { "src": "/(.*)", "dest": "/app.js" }
     ]
   }
+  
   
   
