@@ -21,12 +21,7 @@ const __dirname = dirname(__filename)
 
 const app = express()
 
-app.use(cors({
-  origin: 'http://localhost:3000', // Reemplaza esto con la URL de tu frontend
-  optionsSuccessStatus: 200 // Algunos navegadores requieren un código de estado 200 para aceptar la respuesta CORS
-}));
-
-
+app.use(cors());
 app.use(express.json())
 app.use('/usuarios', usuarioRoutes)
 app.use('/proyectosrealizados', proyectosRealizados)
