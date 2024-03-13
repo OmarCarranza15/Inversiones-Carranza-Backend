@@ -36,9 +36,6 @@ app.use(myconn(mysql, {
    password: 'Sashaloka13',
    database: 'db_incarranza'
  }));
-app.use(express.static(path.join(__dirname,'../../bdimages')))
-import routes from './routes/ImagenRoutes.js'
-app.use(routes)
 
 try {
    await db.authenticate();
