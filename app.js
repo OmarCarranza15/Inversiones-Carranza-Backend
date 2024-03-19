@@ -42,7 +42,6 @@ app.use(myconn(mysql, {
 
 // Crear directorio para imágenes si no existe
 // Ruta al directorio "bdimages" en la raíz del proyecto
-app.use(express.static(path.join(__dirname, 'bdimages')));
 
 try {
    await db.authenticate();
